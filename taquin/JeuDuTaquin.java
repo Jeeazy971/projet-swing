@@ -1,5 +1,8 @@
 package taquin;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import taquin.vue.Vue;
 import taquin.vue.console.VueConsole;
 import taquin.vue.swing.VueSwing;
@@ -23,6 +26,7 @@ public class JeuDuTaquin {
     public static void main(String[] args) {
         Vue vue;
 
+         
         if (args.length >= 1 && args[0].equals("--show"))
             vue = new VueSwing();
         else
@@ -31,6 +35,9 @@ public class JeuDuTaquin {
         ControleurJeu jeu = new ControleurJeu(DIMENSION_DAMIER, DIMENSION_DAMIER, vue);
 
         jeu.demarrerPartie(NB_GLISSEMENTS);
+        
     }
+ 
+
 
 }
